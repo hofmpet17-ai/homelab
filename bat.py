@@ -20,7 +20,7 @@ class Battery:
             p_lad = (self.e - self.e_min)*3600/self.TIME_MESS 
             e_lad = self.e_min 
         self.e = e_lad  
-        return p_lad 
+        return -p_lad 
     def laden(self, p):
             p_lad = p
             if (p_lad> self.p_max): 

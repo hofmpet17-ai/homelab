@@ -1,0 +1,101 @@
+body {
+    background-color: lightgray;
+}
+
+h1{
+    text-align: center;
+}
+.dashboard {
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "anlage leistung heute"
+                        "status leistung auswertung"; 
+
+}
+
+.leistungsfluss {
+    border: 2px solid red;
+    grid-area: leistung; 
+    text-align: center;
+}
+.werte{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "PV  Haus Bat"
+                        "Netz Haus SOC";
+}
+.pv{
+    grid-area: PV;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.haus{
+    grid-area: Haus;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.batterie{
+    grid-area: Bat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.soc{
+    grid-area: SOC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.netz{
+    grid-area: Netz;
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+.auswertung {
+    border: 2px solid blue;
+    grid-area: auswertung;
+    text-align: center;
+
+}
+
+.heute {
+    border: 2px solid green;
+    grid-area: heute;
+    text-align: center;
+
+}
+
+.anlagendaten {
+    border: 2px solid orange;
+    text-align: center;
+    grid-area: anlage; 
+}
+
+.status {
+    border: 2px solid purple;
+    grid-area: status;
+    text-align: center;
+
+}
+.auswertung{
+    text-align: center;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "Energie Kosten";
+
+}
+.energiebilanz{
+    grid-area: Energie;
+}
+.kosten{
+    grid-area: Kosten;
+}
