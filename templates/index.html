@@ -8,30 +8,41 @@
 
 <body> 
        <h1>Andis Dashboard</h1>
+       <br></br> 
     <div class = "dashboard">
     <div class ="leistungsfluss">
     <h2>Aktueller Leisungsfluss</h2>
         <div class = "werte">
         <div class = "pv">
             <h3>PV</h3>
-            <p>{{pv}} W</p>
+            <div class ="messwert">
+            <p id="pv_wert">{{pv}} W</p>
         </div>
+     </div>
         <div class ="haus">
             <h3>Haus</h3>
-            <p>{{p_haus}} W</p>
+            <div class ="messwert">
+            <p id ="haus_wert">{{p_haus}} W</p>
+            </div>
         </div>
         <div class="batterie">
             <h3>Batterie</h3>
-            <p>{{p_bat}}</p>
-        </div>
+            <div class ="messwert">
+                <p id = "bat_wert">{{p_bat}} W</p>
+        </div> 
+    </div>
         <div class="netz">
             <h3>Netz</h3>
-            <p>{{p_netz}} W</p>
+            <div class ="messwert">
+                <p id = "netz_wert">{{p_netz}} W</p>
+            </div>
         </div>
         <div class="soc">
             <h3>SOC</h3>
-            <p>{{soc}}</p>
-        </div>
+            <div class ="messwert">
+             <p id = "soc_wert">{{soc}} %</p>
+        </div> 
+    </div>
     </div>
     </div>
     <div class = "auswertung">
@@ -45,15 +56,15 @@
     </div>
     <div class = "heute">
         <h2>Heute</h2>
-        <p>{{date}}</p>
-        <p>{{time}}</time></p>
+        <p id ="date">{{date}}</p>
+        <p id ="time">{{time}}</time></p>
         <p>{{weather}}</p>
     </div>
     <div class ="anlagendaten">
         <h2>Anlagendaten</h2>
-        <p>{{user}}</p>
-        <p>{{p_anlage}} kWp</p>
-        <p>{{nenn_kap}} kWh</p>
+        <p>Nerdiger Nerd</p>
+        <p>15 kWp</p>
+        <p>10 kWh</p>
     </div>
     <div class="status">
         <h2>Statusmeldungen</h2>
@@ -64,6 +75,6 @@
     </div>
     </div>
     
-   
+<script src ="/static/script.js"></script>
 </body>
 </html>

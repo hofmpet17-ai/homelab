@@ -37,8 +37,7 @@ while(flag is True):
         flag = False
     # hier noch ein Delay einfügen bis die nächste messung ausgeführt werden soll.
         
-test = database.get_latest(conn)
-print(test)
+database.get_data(conn)
 
 
 

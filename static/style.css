@@ -1,38 +1,63 @@
+:root{
+    --c1:  #00ff66; 
+    --c2: rgb(255, 42, 42);
+    --h3size: 16px;  
+}
 body {
-    background-color: lightgray;
+    background: black;
+    color: var(--c1);  
+    font-family: monospace;
 }
 
-h1{
+h1 {
     text-align: center;
+    color: var(--c1);
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px var(--c1);
 }
 .dashboard {
-    border: 3px solid black;
+    border: 3px solid var(--c1);
+    box-shadow: 0 0 4px    var(--c1);
+    border-radius: 6px;
     display: grid;
+    gap: 10px; 
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: "anlage leistung heute"
                         "status leistung auswertung"; 
 
 }
+ .leistungsfluss h2{
 
+        letter-spacing: normal;
+        font-size: 25px;
+
+    }
 .leistungsfluss {
-    border: 2px solid red;
+   
+    padding: 20px; 
+    border: 2px solid var(--c1);
+    box-shadow: 0 0 30px var(--c1);
+    border-radius: 6px;
     grid-area: leistung; 
     text-align: center;
 }
 .werte{
-    display: grid; 
+    display: grid;
+    gap: 15px; 
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "PV  Haus Bat"
                         "Netz Haus SOC";
 }
 .pv{
     grid-area: PV;
+    font-size: var(--h3size);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .haus{
+    font-size: var(--h3size);
     grid-area: Haus;
     display: flex;
     flex-direction: column;
@@ -40,6 +65,7 @@ h1{
     justify-content: center;
 }
 .batterie{
+    font-size: var(--h3size);
     grid-area: Bat;
     display: flex;
     flex-direction: column;
@@ -47,6 +73,7 @@ h1{
     justify-content: center;
 }
 .soc{
+    font-size: var(--h3size);
     grid-area: SOC;
     display: flex;
     flex-direction: column;
@@ -54,45 +81,70 @@ h1{
     justify-content: center;
 }
 .netz{
+    font-size: var(--h3size);
     grid-area: Netz;
       display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; 
 }
+.messwert{
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 0 0 8px var(--c1);
+}
+.pv,
+.haus,
+.batterie,
+.netz,
+.soc {
+    border: 1px solid #004d20;
+    box-shadow: 0 0 6px var(--c1);
+    border-radius: 5px;
+    padding: 10px;
+}
 .auswertung {
-    border: 2px solid blue;
+    border: 2px solid   var(--c1);
+    box-shadow: 0 0 6px var(--c1);
+    border-radius: 6px;
+    font-size: var(--h3size);
     grid-area: auswertung;
-    text-align: center;
-
-}
-
-.heute {
-    border: 2px solid green;
-    grid-area: heute;
-    text-align: center;
-
-}
-
-.anlagendaten {
-    border: 2px solid orange;
-    text-align: center;
-    grid-area: anlage; 
-}
-
-.status {
-    border: 2px solid purple;
-    grid-area: status;
-    text-align: center;
-
-}
-.auswertung{
     text-align: center;
     display: grid; 
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "Energie Kosten";
 
 }
+
+.heute {
+    border: 2px solid   var(--c1); 
+    font-size: var(--h3size);
+    box-shadow: 0 0 6px var(--c1);
+    border-radius: 6px;
+    grid-area: heute;
+    text-align: center;
+
+}
+
+.anlagendaten {
+    border: 2px solid var(--c1); 
+    font-size: var(--h3size);
+    box-shadow: 0 0 6px var(--c1);
+    border-radius: 6px;
+    text-align: center;
+    grid-area: anlage; 
+}
+
+.status {
+    border: 2px solid   var(--c1);
+    font-size: var(--h3size);
+    box-shadow: 0 0 6px var(--c1);
+    border-radius: 6px;
+    grid-area: status;
+    text-align: center;
+
+}
+
 .energiebilanz{
     grid-area: Energie;
 }
